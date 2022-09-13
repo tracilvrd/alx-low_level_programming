@@ -10,8 +10,8 @@ int sum_naturals_3_5(int num);
  */
 int main(void)
 {
-	int result = sum_naturals_3_5(1024);
-
+  int result = sum_naturals_3_5(1024);
+	
 	printf("%d\n", result);
 
 	return (0);
