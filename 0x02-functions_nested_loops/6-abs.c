@@ -2,11 +2,11 @@
 
 /**
  * _abs - Computes the absolute value of a given number.
- * @n: number to compute absolute value
+ * @n: integer to check
  *
- * Return: result of value.
+ * Return: n
  */
-int _abs(int)
+int _abs(int n)
 {
 	if (n < 0)
 		n *= -1;
