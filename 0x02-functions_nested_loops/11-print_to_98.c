@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - Prints all the numbers up or down until 98 deimited by a comma and space
+ * print_to_98 - Prints all the numbers up or down until 98 deimited by a comma
+ * and space
  * @n: The number from which to begin
  *
  * Return: none.
