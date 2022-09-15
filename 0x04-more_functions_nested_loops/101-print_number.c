@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_number - Prints an integer.
- * @n: Number to print.
+ * print_number - Prints an integer to stdout using recursion.
+ * @n: Number to print to stdout.
  *
  * Return: None.
  */
