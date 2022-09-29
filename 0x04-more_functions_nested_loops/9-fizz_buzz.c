@@ -1,31 +1,37 @@
 #include <stdio.h>
 
 /**
- * main - Program entry point.
- *
- * Return: 0.
+ * main - check the code
+ * Return: void
  */
 int main(void)
 {
-	int count = 1;
+	int i = 1;
 
-	while (count <= 100)
+	while (i <= 100)
 	{
-		if (count % 3 == 0)
+		if (i % 3 == 0 && i % 5 == 0)
+		{
+			printf("FizzBuzz");
+		}
+		else if (i % 3 == 0)
 		{
 			printf("Fizz");
-			if (count % 5 == 0)
-				printf("Buzz");
-		} else if (count % 5 == 0)
-		  	printf("Buzz");
+		}
+		else if (i % 5 == 0)
+		{
+	       		printf("Buzz");
+		}
 		else
-			printf("%d", count);
-
-		if (count < 100)
+		{
+			printf("%i", i);
+		}
+		if (i != 100)
+		{
 			putchar(' ');
-		count++;
+		}
+		i++;
 	}
-
 	putchar('\n');
 
 	return (0);
