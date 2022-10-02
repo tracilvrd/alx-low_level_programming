@@ -2,35 +2,37 @@
 #include <stdlib.h>
 
 /**
- * main entry point.
+ * main - A greedy algotithm / Program entry point.
  *
- * this program prints the minimun numbers
- * of coins to make change for an amount of money *
- *
- * @argc: number of cli arguments
- * @argv: list of cli arguments
- * Return: 1 if number of arguments passed is not 1, else 0
+ * @argc: command line argument count.
+ * @argv: Array holding command line arguments as strings.
+ * Return: Always 0.
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int cents;
-	int numOfCoins = 0;
-	int coins[5] = {25, 10, 5, 2, 1};
-	int i; /* coins index */
-
+	int cent[] = {25, 10, 5, 2, 1};
+	int i, change, coins = 0;
+	
 	if (argc != 2)
 	{
-        	printf("Error\n");
+		printf("Error\n");
 		return (1);
 	}
 
-	cents = atoi(argv[1]);
-	for (i = 0; cents && i < 5; i++)
-		while (cents && !(cents - coins[i] < 0))
-		{
-			cents -= coins[i];
-			numOfCoins++;
-		}
-	printf("%d\n", numOfCoins);
+	change = atoi(argv[1]);
+
+	if (change < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+
+	for (i = 0; i < 5 && change; i++)
+	{
+		coins += change / cent[i];
+		change %= cent[i];
+	}
+	printf("%d\n", coins);
+
 	return (0);
 }
