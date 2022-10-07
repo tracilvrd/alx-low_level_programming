@@ -25,7 +25,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	str = malloc((len_s1 + n + 1));
 	if (str == NULL)
 		return (NULL);
-	
+
 	/* Copy s1 and n bytes of s2 into new string */
 	if (len_s1 != 0)
 		strcpy(str, s1);
